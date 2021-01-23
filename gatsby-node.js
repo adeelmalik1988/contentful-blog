@@ -42,6 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allContentfulBlogPost.edges
+  console.log(posts)
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -51,7 +52,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].node.id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].node.id
-console.log(previousPostId)
+      console.log(previousPostId)
       createPage({
         path: post.node.slug,
         component: blogPost,

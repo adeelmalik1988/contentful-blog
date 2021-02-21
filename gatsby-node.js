@@ -107,5 +107,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Fields {
       slug: String
     }
-  `)
+    `
+  )
 }

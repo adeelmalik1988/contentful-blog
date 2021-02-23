@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
   
   repository_dispatch:
-    types: [build_from_contentful]
+    types: [ build ]
 
 
 
